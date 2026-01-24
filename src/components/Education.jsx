@@ -7,7 +7,7 @@ const Education = () => {
       degree: 'B.Tech in Computer Science Engineering',
       institution: 'Vellore Institute of Technology, Andhra Pradesh',
       period: '2022-2026',
-      score: 'CGPA: 8.63',
+      score: 'CGPA: 8.71',
       icon: FaGraduationCap,
     },
     {
