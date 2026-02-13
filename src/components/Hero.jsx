@@ -151,7 +151,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Software Developer
+            Aspiring Software Engineer | Full-Stack & AI
           </motion.p>
           
           <motion.div
@@ -161,13 +161,13 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.6, ease: 'easeOut' }}
           >
             <p>
-              I'm a dedicated Software Developer with a passion for designing clean, efficient, and impactful solutions.
+              I&apos;m an aspiring Software Engineer with strong computer science fundamentals and a passion for building clean, reliable, and user-focused applications.
             </p>
             <p>
-              Experienced with the MERN stack and modern frameworks, I love transforming complex ideas into elegant, user-focused applications.
+              I work across the stack with Java, Python, JavaScript, and modern web frameworks, designing both performant frontends and scalable backend services.
             </p>
             <p>
-              With 300+ LeetCode problems solved and an interest in AI-driven development, I strive to blend creativity with technology to build the future of smart software.
+              With 350+ LeetCode problems solved (Top 37% in contests) and growing experience in AI-powered systems, I love turning complex problems into elegant, real-world solutions.
             </p>
           </motion.div>
 

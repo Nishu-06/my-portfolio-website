@@ -4,10 +4,10 @@ import { FaBriefcase, FaTrophy, FaUsers } from 'react-icons/fa'
 const Experience = () => {
   const experiences = [
     {
-      title: 'Web Development Team Member',
+      title: 'Web Development Lead',
       organization: 'NextGen Cloud Club 2024',
       period: '2024',
-      description: 'Contributed as Web development team member. Student coordinator in Run Raise Repeat, a nationwide event with NGC club.',
+      description: 'Led the Web Development team, overseeing design, development, and deployment of club projects. Contributed as student coordinator in Run Raise Repeat, a nationwide event with NGC club, and assisted in containerizing web apps using Docker.',
       icon: FaBriefcase,
       color: 'from-blue-500 to-blue-600',
     },

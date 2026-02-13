@@ -6,16 +6,15 @@ const Skills = () => {
     {
       title: 'Languages',
       icon: FaCode,
-      skills: ['Java', 'JavaScript', 'CSS', 'HTML', 'Python', 'C++'],
+      skills: ['Java', 'JavaScript', 'Python', 'SQL', 'HTML', 'CSS'],
       color: 'from-blue-500 to-blue-600',
     },
     {
-      title: 'Frameworks & Tools',
+      title: 'Frontend & Backend',
       icon: FaTools,
       skills: [
-        'React', 'Angular', 'Express.js', 'Bootstrap', 'Tailwind CSS', 
-        'Svelte', 'Node.js', 'Git', 'GitHub', 'Docker', 
-        'Google Colab', 'Postman', 'Hoppscotch'
+        'React', 'Next.js', 'Express.js', 'FastAPI', 'Node.js',
+        'Tailwind CSS', 'Bootstrap'
       ],
       color: 'from-purple-500 to-purple-600',
     },
@@ -23,8 +22,8 @@ const Skills = () => {
       title: 'Concepts',
       icon: FaBrain,
       skills: [
-        'OOPs', 'Operating Systems', 'SOLID Principles', 'Design Patterns',
-        'CI/CD pipelines', 'High-Level Design'
+        'OOPs', 'Operating Systems', 'System Design', 'SOLID Principles',
+        'Design Patterns', 'CI/CD pipelines'
       ],
       color: 'from-green-500 to-green-600',
     },
@@ -38,8 +37,8 @@ const Skills = () => {
       title: 'Problem Solving',
       icon: FaChartLine,
       skills: [
-        '300+ LeetCode problems solved',
-        'Top 37.15% in LeetCode Contests',
+        '350+ LeetCode problems solved',
+        'Top 37% in LeetCode Contests',
         'Data Structures & Algorithms'
       ],
       color: 'from-pink-500 to-pink-600',
@@ -48,13 +47,10 @@ const Skills = () => {
       title: 'AI & Cloud',
       icon: FaCloud,
       skills: [
-        'Generative AI',
-        'Prompt Engineering',
-        'LangChain',
-        'OpenAI API',
-        'Google Gemini',
-        'AWS Cloud Foundations',
-        'Oracle Cloud Infrastructure'
+        'Generative AI', 'LangChain', 'RAG Pipelines',
+        'Prompt Engineering', 'LLM-based Systems',
+        'Embeddings & Semantic Search',
+        'AWS (Basics)', 'Oracle Cloud Infrastructure'
       ],
       color: 'from-cyan-500 to-blue-600',
     },

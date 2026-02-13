@@ -42,19 +42,19 @@ const About = () => {
         >
           <motion.div variants={itemVariants} className="space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a passionate <span className="font-semibold text-primary-600">Full Stack Developer</span> 
-              currently pursuing B.Tech in Computer Science Engineering at Vellore Institute of Technology, 
-              Andhra Pradesh with a CGPA of 8.63.
+              I&apos;m an aspiring <span className="font-semibold text-primary-600">Software Engineer</span>{' '}
+              currently pursuing B.Tech in Computer Science Engineering at Vellore Institute of Technology,
+              Andhra Pradesh with a CGPA of 8.71.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              I specialize in building modern web applications using the <span className="font-semibold">MERN stack</span>, 
-              with a keen interest in AI integration and cloud technologies. With 300+ LeetCode problems solved, 
-              I enjoy tackling complex algorithmic challenges and implementing efficient solutions.
+              I specialize in building modern web applications using the <span className="font-semibold">MERN stack</span>{' '}
+              and enjoy designing both frontend experiences and backend services. With 350+ LeetCode problems solved and
+              consistent contest participation, I enjoy tackling algorithmic challenges and writing efficient, maintainable code.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              My expertise spans from frontend frameworks like React and Angular to backend technologies 
-              including Node.js and Express.js. I'm also well-versed in cloud platforms 
-              including AWS, Oracle Cloud, and MongoDB Atlas.
+              My experience spans React and Next.js on the frontend and Node.js, Express.js, and FastAPI on the backend, 
+              along with databases like MongoDB, MySQL, and PostgreSQL. I&apos;m actively exploring Generative AI (LangChain, RAG, LLM-based systems)
+              and cloud platforms including AWS and Oracle Cloud.
             </p>
           </motion.div>
 

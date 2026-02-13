@@ -6,10 +6,10 @@ const Projects = () => {
   const projects = [
     {
       title: 'FinSight – AI Powered Personal Finance Manager',
-      description: 'Built a full-stack finance manager with secure authentication, expense tracking, and category-wise visualization.',
+      description: 'Built a full-stack personal finance manager with secure authentication, expense tracking, and interactive visualizations.',
       features: [
         'Integrated OpenAI API for personalized financial insights',
-        'Automated expense categorization',
+        'Automated expense categorization using LLM prompts',
         'Responsive React frontend with TailwindCSS',
         'Interactive charts using Chart.js',
         'REST APIs in Express.js with MongoDB Atlas',
@@ -22,12 +22,12 @@ const Projects = () => {
     },
     {
       title: 'TrackNPrep - Smart Interview Preparation Platform',
-      description: 'Developed a complete interview preparation platform with role-based question banks, practice modules, and personalized dashboards.',
+      description: 'Developed a full-stack interview preparation platform with role-based question banks, practice modules, and personalized dashboards.',
       features: [
-        'Google Gemini integration for real-time interview questions',
-        'AI Mock Interview module with webcam and microphone support',
-        'Text-to-speech and answer recording',
-        'AI-powered feedback analysis (fluency, tone, relevance)',
+        'LLM-powered question generation using refined prompts',
+        'AI Mock Interview module with automated feedback',
+        'Role-based questions and practice modules',
+        'Dashboard for tracking preparation progress',
         'React + TailwindCSS UI',
         'Express.js backend with MongoDB Atlas'
       ],
@@ -37,18 +37,18 @@ const Projects = () => {
       color: 'from-purple-500 to-pink-500',
     },
     {
-      title: 'Learning Management System',
-      description: 'Built using the MERN Stack to enhance online education through intuitive course and user management.',
+      title: 'Autonomous QA Agent - Test Case & Script Generation',
+      description: 'Designed an autonomous QA agent that generates functional test cases and Selenium scripts using LLM-based reasoning.',
       features: [
-        'Course creation and management',
-        'Student enrollment system',
-        'Content management',
-        'User authentication and authorization',
-        'Responsive design with Tailwind CSS'
+        'FastAPI-based REST APIs to expose LLM-driven QA services',
+        'RAG pipeline using ChromaDB and OpenAI embeddings',
+        'Grounded functional test-case generation from documents',
+        'Automatic Python Selenium script generation',
+        'Semantic search for retrieving relevant context'
       ],
-      tech: ['MongoDB', 'React', 'Node.js', 'Express', 'Tailwind'],
-      icons: [SiMongodb, SiReact, SiNodedotjs, SiExpress],
-      github: 'https://github.com/Nishu-06/learning_management_system',
+      tech: ['FastAPI', 'ChromaDB', 'OpenAI API', 'Selenium', 'RAG'],
+      icons: [SiNodedotjs, SiOpenai],
+      github: 'https://github.com/Nishu-06',
       color: 'from-green-500 to-emerald-500',
     },
   ]
