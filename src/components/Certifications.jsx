@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaCertificate, FaAward, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaAward, FaCertificate, FaExternalLinkAlt } from 'react-icons/fa'
 
 const Certifications = () => {
   const certifications = [
@@ -11,7 +11,7 @@ const Certifications = () => {
       link: 'https://drive.google.com/file/d/1Wj1f7ue38rSXnV1iNr9LNEHz7-_5hQYG/view?usp=sharing',
     },
     {
-      name: 'Oracle Cloud Infrastructure - Foundations Associate',
+      name: 'Oracle Cloud Infrastructure Foundations Associate',
       issuer: 'Oracle',
       date: '2024',
       icon: FaCertificate,
@@ -41,53 +41,41 @@ const Certifications = () => {
   ]
 
   return (
-    <section id="certifications" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Certifications</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto"></div>
-        </motion.div>
+    <section id="certifications" className="section-shell">
+      <div className="section-heading">
+        <span className="section-kicker">Certifications</span>
+        <h2 className="section-title">Additional proof of discipline and continued learning.</h2>
+        <div className="section-rule" />
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certifications.map((cert, index) => (
-            <motion.a
-              key={index}
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 cursor-pointer block"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div className="p-3 bg-gradient-to-br from-primary-600 to-purple-600 rounded-lg text-white flex-shrink-0">
-                  <cert.icon className="w-6 h-6" />
-                </div>
-                <FaExternalLinkAlt className="w-4 h-4 text-gray-400 flex-shrink-0" />
+      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {certifications.map((cert, index) => (
+          <motion.a
+            key={cert.name}
+            href={cert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, delay: index * 0.06 }}
+            className="glass-card flex h-full flex-col p-6 transition-transform duration-200 hover:-translate-y-1"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                <cert.icon className="h-5 w-5" />
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2 leading-tight">{cert.name}</h3>
-                <p className="text-primary-600 font-semibold mb-1">{cert.issuer}</p>
-                <p className="text-sm text-gray-500">{cert.date}</p>
-              </div>
-            </motion.a>
-          ))}
-        </div>
+              <FaExternalLinkAlt className="mt-1 h-4 w-4 text-slate-400" />
+            </div>
+
+            <h3 className="mt-5 text-lg font-semibold leading-7 text-slate-950">{cert.name}</h3>
+            <p className="mt-3 text-sm font-medium text-slate-700">{cert.issuer}</p>
+            <p className="mt-1 text-sm text-slate-500">{cert.date}</p>
+          </motion.a>
+        ))}
       </div>
     </section>
   )
 }
 
 export default Certifications
-

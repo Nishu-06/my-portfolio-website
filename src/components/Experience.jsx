@@ -1,70 +1,84 @@
 import { motion } from 'framer-motion'
-import { FaBriefcase, FaTrophy, FaUsers } from 'react-icons/fa'
+import { FaBriefcase, FaCode, FaRobot } from 'react-icons/fa'
 
 const Experience = () => {
   const experiences = [
     {
-      title: 'Web Development Lead',
-      organization: 'NextGen Cloud Club 2024',
-      period: '2024',
-      description: 'Led the Web Development team, overseeing design, development, and deployment of club projects. Contributed as student coordinator in Run Raise Repeat, a nationwide event with NGC club, and assisted in containerizing web apps using Docker.',
+      title: 'Software Developer Intern',
+      organization: 'UV Netware',
+      period: 'Feb 2026 - Present',
+      achievements: [
+        'Developed an interactive seat layout editor for a SaaS ticket-booking platform, enabling dynamic venue configuration.',
+        'Implemented automated seat management features including numbering, row labeling, and pricing categories.',
+        'Designed row-based and arc-based seat generation tools to create diverse seating layouts efficiently.',
+        'Integrated Zustand for scalable state management across seat data, selections, and editor interactions.',
+        'Collaborated in an agile team using Git while contributing modular, reusable UI components.',
+      ],
       icon: FaBriefcase,
-      color: 'from-blue-500 to-blue-600',
     },
     {
-      title: 'Hackathon Finalist',
-      organization: 'Aerospanza (Hackathon) 2024',
-      period: '2024',
-      description: 'Collaborated in a team of 4 in Aerospanza aviation challenge. Reached final 4th round, top 10 teams nationwide.',
-      icon: FaTrophy,
-      color: 'from-purple-500 to-purple-600',
+      title: 'Freelance AI Data Specialist',
+      organization: 'Deccan AI Experts',
+      period: 'Feb 2026 - Present',
+      achievements: [
+        'Evaluated and validated AI-generated tool and API implementations for logic, parameters, and output behavior.',
+        'Reviewed Python and SQL backend functions to identify syntax errors, logical issues, and edge cases.',
+        'Conducted rubric-based assessments to improve the quality and accuracy of LLM-generated responses.',
+        'Provided structured rationales and corrections to strengthen model performance and system reliability.',
+      ],
+      icon: FaRobot,
     },
   ]
 
   return (
-    <section id="experience" className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Experience</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto"></div>
-        </motion.div>
+    <section id="experience" className="section-shell">
+      <div className="section-heading">
+        <span className="section-kicker">Experience</span>
+        <h2 className="section-title">Hands-on work across product development and AI evaluation.</h2>
+        <div className="section-rule" />
+      </div>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-primary-600"
-            >
-              <div className="flex items-start space-x-6">
-                <div className={`p-4 bg-gradient-to-r ${exp.color} rounded-lg text-white`}>
-                  <exp.icon className="w-8 h-8" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">{exp.title}</h3>
-                  <p className="text-lg text-primary-600 font-semibold mb-2">{exp.organization}</p>
-                  <p className="text-gray-500 mb-3">{exp.period}</p>
-                  <p className="text-gray-700 leading-relaxed">{exp.description}</p>
-                </div>
+      <div className="space-y-6">
+        {experiences.map((exp, index) => (
+          <motion.article
+            key={exp.title}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
+            className="glass-card p-7 md:p-8"
+          >
+            <div className="flex flex-col gap-6 md:flex-row md:items-start">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                <exp.icon className="h-6 w-6" />
               </div>
-            </motion.div>
-          ))}
-        </div>
+
+              <div className="flex-1">
+                <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                  <div>
+                    <h3 className="text-2xl font-semibold text-slate-950">{exp.title}</h3>
+                    <p className="mt-2 text-base font-medium text-slate-700">{exp.organization}</p>
+                  </div>
+                  <span className="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-sm font-medium text-slate-600">
+                    {exp.period}
+                  </span>
+                </div>
+
+                <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-700 md:text-base">
+                  {exp.achievements.map((achievement) => (
+                    <li key={achievement} className="flex items-start gap-3">
+                      <FaCode className="mt-1 h-4 w-4 flex-shrink-0 text-slate-900" />
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.article>
+        ))}
       </div>
     </section>
   )
 }
 
 export default Experience
-

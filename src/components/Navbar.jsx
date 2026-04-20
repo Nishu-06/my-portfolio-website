@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
@@ -8,14 +8,14 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 24)
     }
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const navItems = [
-    { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Education', href: '#education' },
     { name: 'Skills', href: '#skills' },
@@ -27,64 +27,68 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
-      }`}
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="sticky top-0 z-50 px-4 pt-4 md:px-6"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <motion.a
-            href="#home"
-            className="text-2xl font-bold gradient-text"
-            whileHover={{ scale: 1.05 }}
-          >
+      <div
+        className={`mx-auto flex max-w-7xl items-center justify-between rounded-full border px-5 py-3 transition-all duration-300 ${
+          isScrolled
+            ? 'border-slate-200 bg-white/88 shadow-lg backdrop-blur'
+            : 'border-white/50 bg-white/60 backdrop-blur'
+        }`}
+      >
+        <a href="#home" className="flex items-center gap-3">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold tracking-[0.2em] text-white">
             NK
-          </motion.a>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </a>
-            ))}
+          </span>
+          <div className="hidden sm:block">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+              Portfolio
+            </p>
+            <p className="text-base font-semibold text-slate-900">Nishu Kumari</p>
           </div>
+        </a>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-700"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        <div className="hidden items-center gap-6 md:flex">
+          {navItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-sm font-medium text-slate-600 transition-colors duration-200 hover:text-slate-950"
+            >
+              {item.name}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            className="rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5"
           >
-            {isMobileMenuOpen ? (
-              <FaTimes className="w-6 h-6" />
-            ) : (
-              <FaBars className="w-6 h-6" />
-            )}
-          </button>
+            Let&apos;s Connect
+          </a>
         </div>
+
+        <button
+          className="text-slate-700 md:hidden"
+          onClick={() => setIsMobileMenuOpen((open) => !open)}
+          aria-label="Toggle navigation menu"
+        >
+          {isMobileMenuOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white border-t"
+          className="mx-auto mt-3 max-w-7xl rounded-[1.5rem] border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur md:hidden"
         >
-          <div className="px-4 pt-2 pb-4 space-y-2">
+          <div className="flex flex-col gap-2">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-700 hover:text-primary-600 transition-colors"
+                className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
@@ -98,4 +102,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-

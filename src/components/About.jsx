@@ -1,102 +1,98 @@
 import { motion } from 'framer-motion'
-import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa'
+import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 
 const About = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
+  const quickFacts = [
+    { label: 'Education', value: 'B.Tech in Computer Science Engineering, VIT Andhra Pradesh' },
+    { label: 'Core Stack', value: 'React, Node.js, Express.js, FastAPI, MongoDB' },
+    { label: 'Interests', value: 'Applied AI, backend engineering, problem solving' },
+  ]
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  }
+  const contactInfo = [
+    { icon: FaMapMarkerAlt, label: 'Location', value: 'Jharkhand, India', href: null },
+    { icon: FaEnvelope, label: 'Email', value: 'kumarinishu407@gmail.com', href: 'mailto:kumarinishu407@gmail.com' },
+    { icon: FaPhone, label: 'Phone', value: '+91 9060745230', href: 'tel:+919060745230' },
+  ]
 
   return (
-    <section id="about" className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="section-shell">
+      <div className="section-heading">
+        <span className="section-kicker">About</span>
+        <h2 className="section-title">A developer focused on execution, clarity, and growth.</h2>
+        <p className="section-copy">
+          I enjoy turning ideas into polished software experiences, combining solid engineering fundamentals with a practical product mindset.
+        </p>
+        <div className="section-rule" />
+      </div>
+
+      <div className="grid gap-8 lg:grid-cols-[1.25fr_0.85fr]">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="glass-card p-8 md:p-10"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="gradient-text">Me</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto"></div>
+          <div className="space-y-5 text-base leading-8 text-slate-600 md:text-lg">
+            <p>
+              I&apos;m currently pursuing my B.Tech in Computer Science Engineering and building projects across full-stack development, backend services, and AI-assisted applications. My goal is to create software that feels dependable, intuitive, and ready for real users.
+            </p>
+            <p>
+              I work with JavaScript, Java, Python, SQL, React, Express.js, FastAPI, and MongoDB, and I&apos;m especially interested in systems where product thinking and technical execution need to work closely together.
+            </p>
+            <p>
+              Beyond development, I spend time strengthening problem-solving through data structures and algorithms, and I&apos;m actively exploring modern AI workflows such as prompt design, RAG pipelines, and LLM-powered features.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {quickFacts.map((fact) => (
+              <div key={fact.label} className="rounded-[1.25rem] border border-slate-200 bg-white/80 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
+                  {fact.label}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-slate-800">{fact.value}</p>
+              </div>
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-12 items-center"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="glass-card p-8"
         >
-          <motion.div variants={itemVariants} className="space-y-6">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              I&apos;m an aspiring <span className="font-semibold text-primary-600">Software Engineer</span>{' '}
-              currently pursuing B.Tech in Computer Science Engineering at Vellore Institute of Technology,
-              Andhra Pradesh with a CGPA of 8.71.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              I specialize in building modern web applications using the <span className="font-semibold">MERN stack</span>{' '}
-              and enjoy designing both frontend experiences and backend services. With 350+ LeetCode problems solved and
-              consistent contest participation, I enjoy tackling algorithmic challenges and writing efficient, maintainable code.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              My experience spans React and Next.js on the frontend and Node.js, Express.js, and FastAPI on the backend, 
-              along with databases like MongoDB, MySQL, and PostgreSQL. I&apos;m actively exploring Generative AI (LangChain, RAG, LLM-based systems)
-              and cloud platforms including AWS and Oracle Cloud.
-            </p>
-          </motion.div>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+            Contact Snapshot
+          </p>
+          <h3 className="mt-3 text-2xl font-semibold text-slate-950">Professional and easy to reach.</h3>
+          <p className="mt-3 text-sm leading-7 text-slate-600">
+            I&apos;m open to internships, software engineering roles, and opportunities where I can contribute across frontend, backend, and AI-enabled product work.
+          </p>
 
-          <motion.div
-            variants={itemVariants}
-            className="bg-gradient-to-br from-primary-50 to-purple-50 p-8 rounded-2xl shadow-lg"
-          >
-            <h3 className="text-2xl font-bold mb-6 text-gray-800">Contact Information</h3>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-primary-600 text-white rounded-lg">
-                  <FaMapMarkerAlt className="w-5 h-5" />
+          <div className="mt-8 space-y-4">
+            {contactInfo.map((item) => (
+              <div key={item.label} className="flex items-start gap-4 rounded-[1.25rem] border border-slate-200 bg-white/80 p-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                  <item.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-gray-600">Location</p>
-                  <p className="font-semibold text-gray-800">Jharkhand, India</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                    {item.label}
+                  </p>
+                  {item.href ? (
+                    <a href={item.href} className="mt-2 inline-block text-sm font-medium text-slate-800 hover:text-slate-950">
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="mt-2 text-sm font-medium text-slate-800">{item.value}</p>
+                  )}
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-primary-600 text-white rounded-lg">
-                  <FaEnvelope className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-gray-600">Email</p>
-                  <a href="mailto:kumarinishu407@gmail.com" className="font-semibold text-primary-600 hover:underline">
-                    kumarinishu407@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-primary-600 text-white rounded-lg">
-                  <FaPhone className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-gray-600">Phone</p>
-                  <a href="tel:+919060745230" className="font-semibold text-primary-600 hover:underline">
-                    +91 9060745230
-                  </a>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
@@ -104,4 +100,3 @@ const About = () => {
 }
 
 export default About
-

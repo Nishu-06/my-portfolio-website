@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio website for Nishu Kumari",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,4 +25,3 @@
     "vite": "^5.0.8"
   }
 }
-

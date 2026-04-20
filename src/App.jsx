@@ -26,21 +26,25 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen text-slate-900">
       <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Certifications />
-      <Contact />
+      <main className="px-4 pb-10 pt-4 md:px-6">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 md:gap-8">
+          <Hero />
+          <About />
+          <Education />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Certifications />
+          <Contact />
+        </div>
+      </main>
       
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-4 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all duration-300 hover:scale-110"
+          className="fixed bottom-8 right-8 z-50 rounded-full border border-slate-200 bg-white/90 p-4 text-slate-800 shadow-lg backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           aria-label="Scroll to top"
         >
           <FaArrowUp className="w-5 h-5" />
@@ -51,4 +55,3 @@ function App() {
 }
 
 export default App
-

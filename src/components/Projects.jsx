@@ -1,136 +1,124 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-import { SiReact, SiNodedotjs, SiMongodb, SiExpress, SiOpenai, SiGooglecloud } from 'react-icons/si'
+import { FaArrowUpRightFromSquare, FaGithub } from 'react-icons/fa6'
 
 const Projects = () => {
   const projects = [
     {
-      title: 'FinSight – AI Powered Personal Finance Manager',
-      description: 'Built a full-stack personal finance manager with secure authentication, expense tracking, and interactive visualizations.',
-      features: [
-        'Integrated OpenAI API for personalized financial insights',
-        'Automated expense categorization using LLM prompts',
-        'Responsive React frontend with TailwindCSS',
-        'Interactive charts using Chart.js',
-        'REST APIs in Express.js with MongoDB Atlas',
-        'JWT-based authentication'
+      title: 'TrackNPrep',
+      tag: 'Interview Preparation Platform',
+      description:
+        'A full-stack platform for structured interview preparation with role-based practice, dashboard insights, and AI-assisted mock interview support.',
+      highlights: [
+        'Built a React frontend with an Express.js backend using REST-based service design.',
+        'Created role-specific question banks, practice flows, and dashboard-driven progress tracking.',
+        'Integrated LLM-powered question generation and AI mock interview feedback.',
       ],
-      tech: ['MERN Stack', 'OpenAI API', 'Chart.js', 'JWT'],
-      icons: [SiReact, SiNodedotjs, SiMongodb, SiExpress, SiOpenai],
-      github: 'https://github.com/Nishu-06/FinSight',
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      title: 'TrackNPrep - Smart Interview Preparation Platform',
-      description: 'Developed a full-stack interview preparation platform with role-based question banks, practice modules, and personalized dashboards.',
-      features: [
-        'LLM-powered question generation using refined prompts',
-        'AI Mock Interview module with automated feedback',
-        'Role-based questions and practice modules',
-        'Dashboard for tracking preparation progress',
-        'React + TailwindCSS UI',
-        'Express.js backend with MongoDB Atlas'
-      ],
-      tech: ['React', 'Node.js', 'Express.js', 'Google Cloud API', 'MongoDB'],
-      icons: [SiReact, SiNodedotjs, SiExpress, SiGooglecloud, SiMongodb],
+      tech: ['React', 'Express.js', 'MongoDB', 'LLM prompts'],
       github: 'https://github.com/Nishu-06/TrackNPrep',
-      color: 'from-purple-500 to-pink-500',
     },
     {
-      title: 'Autonomous QA Agent - Test Case & Script Generation',
-      description: 'Designed an autonomous QA agent that generates functional test cases and Selenium scripts using LLM-based reasoning.',
-      features: [
-        'FastAPI-based REST APIs to expose LLM-driven QA services',
-        'RAG pipeline using ChromaDB and OpenAI embeddings',
-        'Grounded functional test-case generation from documents',
-        'Automatic Python Selenium script generation',
-        'Semantic search for retrieving relevant context'
+      title: 'Autonomous QA Agent',
+      tag: 'Test Case and Script Generation',
+      description:
+        'An AI-assisted QA system that generates grounded test cases and Python Selenium scripts from source documents and product context.',
+      highlights: [
+        'Designed REST APIs in FastAPI to expose LLM-driven QA capabilities.',
+        'Built a RAG pipeline using ChromaDB and embeddings for grounded generation.',
+        'Generated functional test cases and Selenium automation scripts to support testing workflows.',
       ],
-      tech: ['FastAPI', 'ChromaDB', 'OpenAI API', 'Selenium', 'RAG'],
-      icons: [SiNodedotjs, SiOpenai],
+      tech: ['FastAPI', 'ChromaDB', 'OpenAI embeddings', 'Selenium'],
       github: 'https://github.com/Nishu-06',
-      color: 'from-green-500 to-emerald-500',
+    },
+    {
+      title: 'FinSight',
+      tag: 'AI Personal Finance Manager',
+      description:
+        'A secure full-stack finance application that combines expense tracking, visualization, and AI-powered financial insights.',
+      highlights: [
+        'Implemented authentication, expense tracking, and interactive data visualizations.',
+        'Designed prompt-driven expense categorization and personalized AI financial insights.',
+        'Developed Express.js APIs with MongoDB Atlas and JWT-based authentication.',
+      ],
+      tech: ['React', 'Express.js', 'MongoDB Atlas', 'JWT', 'OpenAI API'],
+      github: 'https://github.com/Nishu-06/FinSight',
     },
   ]
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Projects</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto"></div>
-        </motion.div>
+    <section id="projects" className="section-shell">
+      <div className="section-heading">
+        <span className="section-kicker">Projects</span>
+        <h2 className="section-title">Selected work that reflects how I build.</h2>
+        <p className="section-copy">
+          These projects show the kind of problems I enjoy: structured product flows, backend logic, and AI features that add clear user value.
+        </p>
+        <div className="section-rule" />
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 group"
-            >
-              <div className={`h-2 bg-gradient-to-r ${project.color}`}></div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
-                  <div className="flex space-x-2">
-                    {project.icons.map((Icon, iconIndex) => (
-                      <Icon key={iconIndex} className="w-5 h-5 text-gray-600" />
-                    ))}
-                  </div>
-                </div>
-                
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                
-                <ul className="space-y-2 mb-4">
-                  {project.features.slice(0, 3).map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-gray-600 flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-2 py-1 bg-primary-50 text-primary-600 rounded text-xs font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex space-x-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 transition-colors"
-                  >
-                    <FaGithub className="w-5 h-5" />
-                    <span className="text-sm font-medium">GitHub</span>
-                  </a>
-                </div>
+      <div className="grid gap-6 xl:grid-cols-3">
+        {projects.map((project, index) => (
+          <motion.article
+            key={project.title}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
+            className="glass-card flex h-full flex-col p-7"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
+                  {project.tag}
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold text-slate-950">{project.title}</h3>
               </div>
-            </motion.div>
-          ))}
-        </div>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition-colors hover:text-slate-950"
+                aria-label={`Open ${project.title} GitHub repository`}
+              >
+                <FaArrowUpRightFromSquare className="h-4 w-4" />
+              </a>
+            </div>
+
+            <p className="mt-5 text-sm leading-7 text-slate-600">{project.description}</p>
+
+            <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-700">
+              {project.highlights.map((highlight) => (
+                <li key={highlight} className="flex items-start gap-3">
+                  <span className="mt-3 h-1.5 w-1.5 rounded-full bg-slate-900" />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {project.tech.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-slate-600"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-slate-800 hover:text-slate-950"
+            >
+              <FaGithub className="h-4 w-4" />
+              View repository
+            </a>
+          </motion.article>
+        ))}
       </div>
     </section>
   )
 }
 
 export default Projects
-

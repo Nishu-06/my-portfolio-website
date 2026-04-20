@@ -1,161 +1,172 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCode, FaCopy, FaCheck } from 'react-icons/fa'
-import { HiMail } from 'react-icons/hi'
+import { FaCheck, FaCode, FaCopy, FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 
 const Contact = () => {
   const [emailCopied, setEmailCopied] = useState(false)
 
-  const copyEmailToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText('kumarinishu407@gmail.com')
-      setEmailCopied(true)
-      setTimeout(() => setEmailCopied(false), 2000)
-    } catch (err) {
-      console.error('Failed to copy email:', err)
-    }
-  }
   const contactMethods = [
     {
       icon: FaEnvelope,
       label: 'Email',
       value: 'kumarinishu407@gmail.com',
       href: 'mailto:kumarinishu407@gmail.com',
-      color: 'from-red-500 to-pink-500',
     },
     {
       icon: FaPhone,
       label: 'Phone',
       value: '+91 9060745230',
       href: 'tel:+919060745230',
-      color: 'from-green-500 to-emerald-500',
     },
     {
       icon: FaMapMarkerAlt,
       label: 'Location',
       value: 'Jharkhand, India',
-      href: '#',
-      color: 'from-blue-500 to-cyan-500',
+      href: null,
     },
     {
       icon: FaGithub,
       label: 'GitHub',
-      value: 'Nishu-06',
+      value: 'github.com/Nishu-06',
       href: 'https://github.com/Nishu-06',
-      color: 'from-gray-700 to-gray-900',
     },
     {
       icon: FaLinkedin,
       label: 'LinkedIn',
-      value: 'Nishu Kumari',
+      value: 'linkedin.com/in/nishu-kumari-5b4b61266',
       href: 'https://www.linkedin.com/in/nishu-kumari-5b4b61266',
-      color: 'from-blue-600 to-blue-700',
     },
     {
       icon: FaCode,
       label: 'LeetCode',
-      value: 'Nishu_kumari6',
+      value: 'leetcode.com/Nishu_kumari6',
       href: 'https://leetcode.com/Nishu_kumari6',
-      color: 'from-orange-500 to-yellow-500',
     },
   ]
 
+  const copyEmailToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText('kumarinishu407@gmail.com')
+      setEmailCopied(true)
+      setTimeout(() => setEmailCopied(false), 2000)
+    } catch (error) {
+      console.error('Failed to copy email:', error)
+    }
+  }
+
   return (
-    <section id="contact" className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="contact" className="section-shell">
+      <div className="section-heading">
+        <span className="section-kicker">Contact</span>
+        <h2 className="section-title">Let&apos;s build something useful together.</h2>
+        <p className="section-copy">
+          I&apos;m open to internships, full-stack development opportunities, and teams working on strong product and engineering problems.
+        </p>
+        <div className="section-rule" />
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.5 }}
+          className="glass-card p-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto mb-4"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+            Reach Out
           </p>
+          <h3 className="mt-3 text-3xl font-semibold text-slate-950">Available for the next meaningful opportunity.</h3>
+          <p className="mt-4 max-w-2xl text-base leading-8 text-slate-600">
+            If you&apos;re hiring, collaborating on a project, or just want to discuss software engineering, I&apos;d be happy to connect. The quickest way to reach me is by email.
+          </p>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {contactMethods.map((method) => {
+              const content = (
+                <div className="rounded-[1.25rem] border border-slate-200 bg-white/85 p-5 transition-colors duration-200 hover:bg-white">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                      <method.icon className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                        {method.label}
+                      </p>
+                      <p className="mt-2 text-sm font-medium leading-6 text-slate-800">
+                        {method.value}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )
+
+              if (!method.href) {
+                return <div key={method.label}>{content}</div>
+              }
+
+              return (
+                <a
+                  key={method.label}
+                  href={method.href}
+                  target={method.href.startsWith('http') ? '_blank' : undefined}
+                  rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >
+                  {content}
+                </a>
+              )
+            })}
+          </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {contactMethods.map((method, index) => (
-            <motion.a
-              key={index}
-              href={method.href}
-              target={method.href.startsWith('http') ? '_blank' : undefined}
-              rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100"
-            >
-              <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${method.color} text-white mb-4`}>
-                <method.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-1">{method.label}</h3>
-              <p className="text-gray-600">{method.value}</p>
-            </motion.a>
-          ))}
-        </div>
-
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
+          transition={{ duration: 0.5, delay: 0.08 }}
+          className="glass-card flex flex-col justify-between p-8"
         >
-          <div className="bg-gradient-to-r from-primary-600 to-purple-600 rounded-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Let's Work Together!</h3>
-            <p className="mb-6 text-lg">
-              Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
+              Quick Actions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="mailto:kumarinishu407@gmail.com?subject=Portfolio%20Contact&body=Hello%20Nishu,"
-                className="inline-block px-8 py-3 bg-white text-primary-600 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
-              >
-                Send Email
-              </a>
-              <button
-                onClick={copyEmailToClipboard}
-                className="inline-flex items-center gap-2 px-8 py-3 bg-white/20 backdrop-blur-sm text-white rounded-full font-semibold hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer border border-white/30"
-              >
-                {emailCopied ? (
-                  <>
-                    <FaCheck className="w-5 h-5" />
-                    <span>Copied!</span>
-                  </>
-                ) : (
-                  <>
-                    <FaCopy className="w-5 h-5" />
-                    <span>Copy Email</span>
-                  </>
-                )}
-              </button>
-            </div>
-            <p className="mt-4 text-white/80 text-sm">
-              Email: <a href="mailto:kumarinishu407@gmail.com" className="underline hover:text-white">kumarinishu407@gmail.com</a>
-            </p>
+            <h3 className="mt-3 text-2xl font-semibold text-slate-950">Simple ways to start a conversation.</h3>
+          </div>
+
+          <div className="mt-8 space-y-4">
+            <a
+              href="mailto:kumarinishu407@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Nishu,"
+              className="inline-flex w-full items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              Send an Email
+            </a>
+            <button
+              onClick={copyEmailToClipboard}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-800 transition-colors duration-200 hover:bg-white"
+            >
+              {emailCopied ? (
+                <>
+                  <FaCheck className="h-4 w-4" />
+                  Copied Email
+                </>
+              ) : (
+                <>
+                  <FaCopy className="h-4 w-4" />
+                  Copy Email Address
+                </>
+              )}
+            </button>
+          </div>
+
+          <div className="mt-10 border-t border-slate-200 pt-6 text-sm leading-7 text-slate-500">
+            <p>Nishu Kumari</p>
+            <p>Full-stack Developer and AI-focused Software Engineer</p>
+            <p className="mt-3">© 2026 All rights reserved.</p>
           </div>
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mt-16 text-center text-gray-600 py-8 border-t border-gray-200"
-      >
-        <p>© 2024 Nishu Kumari. All rights reserved.</p>
-      </motion.div>
     </section>
   )
 }
 
 export default Contact
-
