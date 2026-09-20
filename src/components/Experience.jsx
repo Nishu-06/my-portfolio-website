@@ -1,30 +1,42 @@
 import { motion } from 'framer-motion'
-import { FaBriefcase, FaCode, FaRobot } from 'react-icons/fa'
+import { FaBriefcase, FaCode, FaLaptopCode, FaRobot } from 'react-icons/fa'
 
 const Experience = () => {
   const experiences = [
     {
+      title: 'Technical Content Engineer Intern',
+      organization: 'HackerEarth',
+      period: 'Jul 2026 - Present',
+      achievements: [
+        'Engineer technical questions end-to-end across programming, databases, DevOps, and full-stack domains, writing reference solutions, automated test suites, and validation logic that run on HackerEarth\u2019s assessment platform.',
+        'Architected full-stack applications from scratch as candidate-ready codebases, building the project structure, boilerplate, and working frontend and backend reference implementation to mirror real-world systems.',
+        'Designed relational schemas, queries, and validation logic across PostgreSQL, MS SQL Server, Oracle, and MySQL.',
+        'Configured deployment environments and CI/CD pipelines for DevOps problems on real infrastructure workflows.',
+        'Prompt-engineered AI-generated product prototypes across multiple domains for Vibe Code Arena, HackerEarth\u2019s in-house product, iterating on outputs for functionality and code quality.',
+        'Debugged and root-caused client-reported platform issues across code correctness, test cases, and execution environments.',
+      ],
+      icon: FaLaptopCode,
+    },
+    {
       title: 'Software Developer Intern',
       organization: 'UV Netware',
-      period: 'Feb 2026 - Present',
+      period: 'Feb 2026 - May 2026',
       achievements: [
-        'Developed an interactive seat layout editor for a SaaS ticket-booking platform, enabling dynamic venue configuration.',
-        'Implemented automated seat management features including numbering, row labeling, and pricing categories.',
-        'Designed row-based and arc-based seat generation tools to create diverse seating layouts efficiently.',
-        'Integrated Zustand for scalable state management across seat data, selections, and editor interactions.',
-        'Collaborated in an agile team using Git while contributing modular, reusable UI components.',
+        'Developed features for a B2B SaaS seat-layout management platform used to design seating for venues and events.',
+        'Built a drag-and-drop visual layout editor in React.js, managing complex client-side state with Zustand.',
+        'Integrated REST APIs between the React frontend and backend, handling data persistence, error states, and validation.',
+        'Debugged and resolved production issues, delivering tested, production-ready features in an Agile sprint workflow.',
       ],
       icon: FaBriefcase,
     },
     {
-      title: 'Freelance AI Data Specialist',
-      organization: 'Deccan AI Experts',
-      period: 'Feb 2026 - Present',
+      title: 'Freelance AI Specialist',
+      organization: 'Outlier AI & Deccan AI Experts',
+      period: 'Feb 2026 - Jul 2026',
       achievements: [
-        'Evaluated and validated AI-generated tool and API implementations for logic, parameters, and output behavior.',
-        'Reviewed Python and SQL backend functions to identify syntax errors, logical issues, and edge cases.',
-        'Conducted rubric-based assessments to improve the quality and accuracy of LLM-generated responses.',
-        'Provided structured rationales and corrections to strengthen model performance and system reliability.',
+        'Reviewed LLM-generated code, APIs, and SQL in Python and Java for correctness and edge-case handling.',
+        'Wrote reference solutions and test cases to benchmark AI-generated code against engineering standards.',
+        'Performed prompt testing and root-cause error analysis to improve the quality of AI-generated code.',
       ],
       icon: FaRobot,
     },
@@ -34,7 +46,7 @@ const Experience = () => {
     <section id="experience" className="section-shell">
       <div className="section-heading">
         <span className="section-kicker">Experience</span>
-        <h2 className="section-title">Hands-on work across product development and AI evaluation.</h2>
+        <h2 className="section-title">Hands-on work across platform engineering, product, and AI.</h2>
         <div className="section-rule" />
       </div>
 

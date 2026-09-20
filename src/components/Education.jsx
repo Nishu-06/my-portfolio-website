@@ -4,10 +4,10 @@ import { FaGraduationCap } from 'react-icons/fa'
 const Education = () => {
   const education = [
     {
-      degree: 'B.Tech in Computer Science Engineering',
+      degree: 'B.Tech in Computer Science and Engineering',
       institution: 'Vellore Institute of Technology, Andhra Pradesh',
-      period: '2022 - 2026',
-      score: 'CGPA: 8.71',
+      period: 'Sep 2022 - Jun 2026',
+      score: 'CGPA: 8.82',
     },
     {
       degree: '12th CBSE - Science (Maths)',

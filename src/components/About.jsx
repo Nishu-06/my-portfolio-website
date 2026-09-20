@@ -3,13 +3,13 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 
 const About = () => {
   const quickFacts = [
-    { label: 'Education', value: 'B.Tech in Computer Science Engineering, VIT Andhra Pradesh' },
-    { label: 'Core Stack', value: 'React, Node.js, Express.js, FastAPI, MongoDB' },
-    { label: 'Interests', value: 'Applied AI, backend engineering, problem solving' },
+    { label: 'Education', value: 'B.Tech in Computer Science and Engineering, VIT Andhra Pradesh' },
+    { label: 'Core Stack', value: 'Java, Node.js, Express.js, Spring Boot, React.js, PostgreSQL, MongoDB' },
+    { label: 'Interests', value: 'Backend engineering, generative AI, problem solving' },
   ]
 
   const contactInfo = [
-    { icon: FaMapMarkerAlt, label: 'Location', value: 'Jharkhand, India', href: null },
+    { icon: FaMapMarkerAlt, label: 'Location', value: 'Bangalore, India', href: null },
     { icon: FaEnvelope, label: 'Email', value: 'kumarinishu407@gmail.com', href: 'mailto:kumarinishu407@gmail.com' },
     { icon: FaPhone, label: 'Phone', value: '+91 9060745230', href: 'tel:+919060745230' },
   ]
@@ -35,13 +35,13 @@ const About = () => {
         >
           <div className="space-y-5 text-base leading-8 text-slate-600 md:text-lg">
             <p>
-              I&apos;m currently pursuing my B.Tech in Computer Science Engineering and building projects across full-stack development, backend services, and AI-assisted applications. My goal is to create software that feels dependable, intuitive, and ready for real users.
+              I&apos;m a software engineer working at the intersection of backend systems, full-stack development, and applied AI. At HackerEarth I engineer technical assessment content end-to-end, writing reference solutions, automated test suites, and candidate-ready full-stack codebases across programming, databases, DevOps, and full-stack domains.
             </p>
             <p>
-              I work with JavaScript, Java, Python, SQL, React, Express.js, FastAPI, and MongoDB, and I&apos;m especially interested in systems where product thinking and technical execution need to work closely together.
+              I work with Java, JavaScript, Python, and SQL, building services with Node.js, Express.js, and Spring Boot, interfaces with React.js and Next.js, and data layers across PostgreSQL, MySQL, MS SQL Server, Oracle, MongoDB, and Redis.
             </p>
             <p>
-              Beyond development, I spend time strengthening problem-solving through data structures and algorithms, and I&apos;m actively exploring modern AI workflows such as prompt design, RAG pipelines, and LLM-powered features.
+              Beyond development, I keep my problem-solving sharp through data structures and algorithms, and I work hands-on with modern AI workflows including prompt engineering, RAG pipelines, agentic AI, and OpenAI APIs.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ const About = () => {
           </p>
           <h3 className="mt-3 text-2xl font-semibold text-slate-950">Professional and easy to reach.</h3>
           <p className="mt-3 text-sm leading-7 text-slate-600">
-            I&apos;m open to internships, software engineering roles, and opportunities where I can contribute across frontend, backend, and AI-enabled product work.
+            I&apos;m open to software engineering roles and opportunities where I can contribute across backend, full-stack, and AI-enabled product work.
           </p>
 
           <div className="mt-8 space-y-4">

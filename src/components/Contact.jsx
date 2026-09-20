@@ -21,7 +21,7 @@ const Contact = () => {
     {
       icon: FaMapMarkerAlt,
       label: 'Location',
-      value: 'Jharkhand, India',
+      value: 'Bangalore, India',
       href: null,
     },
     {
@@ -60,7 +60,7 @@ const Contact = () => {
         <span className="section-kicker">Contact</span>
         <h2 className="section-title">Let&apos;s build something useful together.</h2>
         <p className="section-copy">
-          I&apos;m open to internships, full-stack development opportunities, and teams working on strong product and engineering problems.
+          I&apos;m open to software engineering roles across backend, full-stack, and AI-driven products, and to teams working on strong engineering problems.
         </p>
         <div className="section-rule" />
       </div>
@@ -160,7 +160,7 @@ const Contact = () => {
 
           <div className="mt-10 border-t border-slate-200 pt-6 text-sm leading-7 text-slate-500">
             <p>Nishu Kumari</p>
-            <p>Full-stack Developer and AI-focused Software Engineer</p>
+            <p>Software Engineer &mdash; Backend, Full-Stack, and Applied AI</p>
             <p className="mt-3">© 2026 All rights reserved.</p>
           </div>
         </motion.div>

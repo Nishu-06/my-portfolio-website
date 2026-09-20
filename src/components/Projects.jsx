@@ -5,29 +5,29 @@ const Projects = () => {
   const projects = [
     {
       title: 'TrackNPrep',
-      tag: 'Interview Preparation Platform',
+      tag: 'Smart Interview Preparation Platform',
       description:
-        'A full-stack platform for structured interview preparation with role-based practice, dashboard insights, and AI-assisted mock interview support.',
+        'A full-stack interview preparation platform that combines structured practice flows with LLM-powered question generation and adaptive feedback.',
       highlights: [
-        'Built a React frontend with an Express.js backend using REST-based service design.',
-        'Created role-specific question banks, practice flows, and dashboard-driven progress tracking.',
-        'Integrated LLM-powered question generation and AI mock interview feedback.',
+        'Built a full-stack interview preparation platform with REST APIs for question generation and answer evaluation.',
+        'Engineered prompts and conversational workflows to integrate LLM APIs for question generation and adaptive feedback.',
+        'Developed an AI mock-interview system that evaluates candidate responses and delivers personalized feedback.',
       ],
-      tech: ['React', 'Express.js', 'MongoDB', 'LLM prompts'],
+      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'LLMs'],
       github: 'https://github.com/Nishu-06/TrackNPrep',
     },
     {
-      title: 'Autonomous QA Agent',
-      tag: 'Test Case and Script Generation',
+      title: 'AI Talent Scouting Agent',
+      tag: 'Recruiter Copilot & Engagement Agent',
       description:
-        'An AI-assisted QA system that generates grounded test cases and Python Selenium scripts from source documents and product context.',
+        'A recruiter copilot that turns job descriptions into ranked candidate shortlists with explainable summaries and AI-powered outreach.',
       highlights: [
-        'Designed REST APIs in FastAPI to expose LLM-driven QA capabilities.',
-        'Built a RAG pipeline using ChromaDB and embeddings for grounded generation.',
-        'Generated functional test cases and Selenium automation scripts to support testing workflows.',
+        'Built a recruiter copilot that converts job descriptions into ranked candidate shortlists with explainable profile summaries.',
+        'Designed backend APIs and prompt workflows for candidate matching and explainable profile summarization.',
+        'Integrated OpenAI-powered outreach and built an analytics dashboard with candidate rankings and hiring insights.',
       ],
-      tech: ['FastAPI', 'ChromaDB', 'OpenAI embeddings', 'Selenium'],
-      github: 'https://github.com/Nishu-06',
+      tech: ['React.js', 'Node.js', 'Express.js', 'OpenAI API', 'MongoDB', 'Tailwind CSS'],
+      github: 'https://github.com/Nishu-06/ai-talent-scouting-agent',
     },
     {
       title: 'FinSight',
@@ -39,8 +39,21 @@ const Projects = () => {
         'Designed prompt-driven expense categorization and personalized AI financial insights.',
         'Developed Express.js APIs with MongoDB Atlas and JWT-based authentication.',
       ],
-      tech: ['React', 'Express.js', 'MongoDB Atlas', 'JWT', 'OpenAI API'],
+      tech: ['React.js', 'Express.js', 'MongoDB Atlas', 'JWT', 'OpenAI API'],
       github: 'https://github.com/Nishu-06/FinSight',
+    },
+    {
+      title: 'Autonomous QA Agent',
+      tag: 'Test Case and Script Generation',
+      description:
+        'An AI-assisted QA system that generates grounded test cases and Python Selenium scripts from source documents and product context.',
+      highlights: [
+        'Designed REST APIs to expose LLM-driven QA capabilities for test generation.',
+        'Built a RAG pipeline using ChromaDB and embeddings for grounded generation.',
+        'Generated functional test cases and Selenium automation scripts to support testing workflows.',
+      ],
+      tech: ['Python', 'RAG', 'ChromaDB', 'OpenAI APIs', 'Selenium'],
+      github: 'https://github.com/Nishu-06/qa-agent-project',
     },
   ]
 
@@ -55,7 +68,7 @@ const Projects = () => {
         <div className="section-rule" />
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) => (
           <motion.article
             key={project.title}
@@ -76,7 +89,7 @@ const Projects = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition-colors hover:text-slate-950"
+                className="inline-flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition-colors hover:text-slate-950"
                 aria-label={`Open ${project.title} GitHub repository`}
               >
                 <FaArrowUpRightFromSquare className="h-4 w-4" />
@@ -88,7 +101,7 @@ const Projects = () => {
             <ul className="mt-6 space-y-3 text-sm leading-7 text-slate-700">
               {project.highlights.map((highlight) => (
                 <li key={highlight} className="flex items-start gap-3">
-                  <span className="mt-3 h-1.5 w-1.5 rounded-full bg-slate-900" />
+                  <span className="mt-3 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-slate-900" />
                   <span>{highlight}</span>
                 </li>
               ))}

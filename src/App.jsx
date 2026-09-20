@@ -5,6 +5,7 @@ import Education from './components/Education'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
+import Achievements from './components/Achievements'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
@@ -36,6 +37,7 @@ function App() {
           <Skills />
           <Projects />
           <Experience />
+          <Achievements />
           <Certifications />
           <Contact />
         </div>

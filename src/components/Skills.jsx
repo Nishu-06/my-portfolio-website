@@ -1,37 +1,42 @@
 import { motion } from 'framer-motion'
-import { FaBrain, FaCloud, FaCode, FaDatabase, FaLayerGroup, FaTools } from 'react-icons/fa'
+import { FaBrain, FaCode, FaDatabase, FaLayerGroup, FaRobot, FaServer, FaTools } from 'react-icons/fa'
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Languages',
       icon: FaCode,
-      skills: ['Java', 'JavaScript', 'Python', 'SQL', 'HTML', 'CSS'],
+      skills: ['Java', 'JavaScript', 'Python', 'SQL'],
     },
     {
-      title: 'Frameworks',
+      title: 'Backend',
+      icon: FaServer,
+      skills: ['Node.js', 'Express.js', 'Spring Boot', 'REST APIs', 'JWT Authentication', 'Microservices'],
+    },
+    {
+      title: 'Frontend',
       icon: FaLayerGroup,
-      skills: ['React', 'Next.js', 'Node.js', 'Express.js', 'FastAPI', 'Tailwind CSS'],
+      skills: ['React.js', 'Next.js', 'Zustand', 'Tailwind CSS'],
     },
     {
       title: 'Databases',
       icon: FaDatabase,
-      skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'Redis'],
+      skills: ['PostgreSQL', 'MySQL', 'MS SQL Server', 'Oracle', 'MongoDB', 'Redis'],
     },
     {
-      title: 'Engineering',
+      title: 'DevOps & Tools',
       icon: FaTools,
-      skills: ['REST APIs', 'Git', 'Postman', 'Microservices basics', 'CI/CD basics'],
+      skills: ['Git', 'GitHub', 'GitHub Actions', 'CI/CD', 'Docker', 'AWS', 'Linux', 'Postman', 'Jira', 'Vercel', 'Render'],
     },
     {
-      title: 'Core Concepts',
+      title: 'AI & Generative AI',
+      icon: FaRobot,
+      skills: ['LLMs', 'RAG', 'Agentic AI', 'Prompt Engineering', 'OpenAI APIs'],
+    },
+    {
+      title: 'Core Computer Science',
       icon: FaBrain,
-      skills: ['OOP', 'System Design', 'SOLID Principles', 'Problem Solving', 'DSA'],
-    },
-    {
-      title: 'AI and Cloud',
-      icon: FaCloud,
-      skills: ['LLMs', 'RAG', 'LangChain', 'Prompt Engineering', 'AWS basics', 'Oracle Cloud'],
+      skills: ['Data Structures & Algorithms', 'OOP', 'DBMS', 'Operating Systems', 'Computer Networks'],
     },
   ]
 
@@ -39,9 +44,9 @@ const Skills = () => {
     <section id="skills" className="section-shell">
       <div className="section-heading">
         <span className="section-kicker">Skills</span>
-        <h2 className="section-title">A practical toolkit across product, backend, and AI workflows.</h2>
+        <h2 className="section-title">A practical toolkit across backend, frontend, and AI workflows.</h2>
         <p className="section-copy">
-          I focus on technologies that help me move from idea to working product, with enough depth to build reliable features and enough range to collaborate across the stack.
+          I focus on technologies that help me move from idea to working product, with enough depth to build reliable services and enough range to collaborate across the stack.
         </p>
         <div className="section-rule" />
       </div>

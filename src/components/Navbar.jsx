@@ -21,6 +21,7 @@ const Navbar = () => {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Achievements', href: '#achievements' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' },
   ]
@@ -50,7 +51,7 @@ const Navbar = () => {
           </div>
         </a>
 
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-5 lg:flex xl:gap-6">
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -69,7 +70,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="text-slate-700 md:hidden"
+          className="text-slate-700 lg:hidden"
           onClick={() => setIsMobileMenuOpen((open) => !open)}
           aria-label="Toggle navigation menu"
         >
@@ -81,7 +82,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mx-auto mt-3 max-w-7xl rounded-[1.5rem] border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur md:hidden"
+          className="mx-auto mt-3 max-w-7xl rounded-[1.5rem] border border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur lg:hidden"
         >
           <div className="flex flex-col gap-2">
             {navItems.map((item) => (

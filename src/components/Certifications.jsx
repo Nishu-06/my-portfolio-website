@@ -4,32 +4,25 @@ import { FaAward, FaCertificate, FaExternalLinkAlt } from 'react-icons/fa'
 const Certifications = () => {
   const certifications = [
     {
-      name: 'MERN Full-Stack Development',
-      issuer: 'Ethnus',
-      date: 'Aug 2024',
+      name: 'AWS Cloud Foundations',
+      issuer: 'AWS',
+      date: '2024',
       icon: FaCertificate,
-      link: 'https://drive.google.com/file/d/1Wj1f7ue38rSXnV1iNr9LNEHz7-_5hQYG/view?usp=sharing',
+      link: 'https://drive.google.com/file/d/1NypCyhmIjJoaqVLXhvhskyiEMhcl1c1X/view?usp=sharing',
     },
     {
-      name: 'Oracle Cloud Infrastructure Foundations Associate',
+      name: 'Oracle Cloud Infrastructure (OCI) Foundations',
       issuer: 'Oracle',
       date: '2024',
       icon: FaCertificate,
       link: 'https://drive.google.com/file/d/1oJFTudSGki0-HB6LsnlIQPUFyJCyH7V-/view?usp=sharing',
     },
     {
-      name: 'Oracle Cloud Infrastructure Generative AI',
+      name: 'Oracle Generative AI',
       issuer: 'Oracle',
       date: '2025',
       icon: FaAward,
       link: 'https://drive.google.com/file/d/1_6Lx4fgEpqK16f73FVMCg1QvwqQ1lePU/view?usp=sharing',
-    },
-    {
-      name: 'AWS Cloud Foundations',
-      issuer: 'AWS',
-      date: '2024',
-      icon: FaCertificate,
-      link: 'https://drive.google.com/file/d/1NypCyhmIjJoaqVLXhvhskyiEMhcl1c1X/view?usp=sharing',
     },
     {
       name: 'MongoDB Certified Database Administrator',
@@ -38,13 +31,20 @@ const Certifications = () => {
       icon: FaCertificate,
       link: 'https://drive.google.com/file/d/1eLdjMDPT8lcFoQFpjnevTLio3GP5dQGl/view?usp=sharing',
     },
+    {
+      name: 'MERN Full-Stack Development',
+      issuer: 'Ethnus',
+      date: 'Aug 2024',
+      icon: FaCertificate,
+      link: 'https://drive.google.com/file/d/1Wj1f7ue38rSXnV1iNr9LNEHz7-_5hQYG/view?usp=sharing',
+    },
   ]
 
   return (
     <section id="certifications" className="section-shell">
       <div className="section-heading">
         <span className="section-kicker">Certifications</span>
-        <h2 className="section-title">Additional proof of discipline and continued learning.</h2>
+        <h2 className="section-title">Cloud, AI, and full-stack credentials.</h2>
         <div className="section-rule" />
       </div>
 

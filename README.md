@@ -1,6 +1,6 @@
 # Nishu Kumari - Portfolio Website
 
-A modern, responsive portfolio website showcasing my skills, projects, and experience as a Full Stack Developer.
+A modern, responsive portfolio website showcasing my skills, projects, and experience as a Software Engineer working across backend systems, full-stack development, and applied AI.
 
 ## Features
 
@@ -65,6 +65,7 @@ npm run preview
 ├── src/
 │   ├── components/
 │   │   ├── About.jsx
+│   │   ├── Achievements.jsx
 │   │   ├── Certifications.jsx
 │   │   ├── Contact.jsx
 │   │   ├── Education.jsx
@@ -92,8 +93,9 @@ To customize the portfolio with your own information:
 3. Add your skills in `src/components/Skills.jsx`
 4. Update projects in `src/components/Projects.jsx`
 5. Edit experience in `src/components/Experience.jsx`
-6. Add certifications in `src/components/Certifications.jsx`
-7. Update contact information in `src/components/Contact.jsx`
+6. Update achievements in `src/components/Achievements.jsx`
+7. Add certifications in `src/components/Certifications.jsx`
+8. Update contact information in `src/components/Contact.jsx`
 
 ## Sections
 
@@ -102,7 +104,8 @@ To customize the portfolio with your own information:
 - **Education** - Academic background
 - **Skills** - Technical and soft skills
 - **Projects** - Showcase of projects
-- **Experience** - Work and volunteer experience
+- **Experience** - Internships and freelance work
+- **Achievements** - Competitive programming and hackathon highlights
 - **Certifications** - Professional certifications
 - **Contact** - Contact information and social links
 

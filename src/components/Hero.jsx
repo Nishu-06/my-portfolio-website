@@ -10,9 +10,9 @@ const Hero = () => {
   ]
 
   const highlights = [
-    { label: 'Current Focus', value: 'Full-stack engineering and applied AI' },
-    { label: 'Experience', value: 'Software Developer Intern at UV Netware' },
-    { label: 'Problem Solving', value: '350+ LeetCode problems solved' },
+    { label: 'Current Focus', value: 'Backend engineering, full-stack systems, and applied AI' },
+    { label: 'Experience', value: 'Technical Content Engineer Intern at HackerEarth' },
+    { label: 'Problem Solving', value: '400+ LeetCode problems, 1525 contest rating' },
   ]
 
   return (
@@ -30,11 +30,11 @@ const Hero = () => {
           </span>
 
           <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-tight tracking-tight text-slate-950 md:text-6xl lg:text-7xl">
-            Building thoughtful digital products with full-stack engineering and AI.
+            Building reliable backend systems and AI-powered products.
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-            I&apos;m Nishu Kumari, a computer science student and software developer focused on clean frontend experiences, reliable backend systems, and practical AI features that solve real user problems.
+            I&apos;m Nishu Kumari, a software engineer based in Bangalore working across backend services, full-stack applications, and generative AI. I currently engineer assessment content and reference codebases at HackerEarth, spanning programming, databases, DevOps, and full-stack domains.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -97,11 +97,11 @@ const Hero = () => {
 
             <div className="mt-6 border-t border-slate-200 pt-6">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">
-                Based in India
+                Based in Bangalore, India
               </p>
               <h2 className="mt-2 text-2xl font-semibold text-slate-950">Nishu Kumari</h2>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                B.Tech CSE student at VIT Andhra Pradesh, building web applications, backend services, and AI-assisted workflows with a strong focus on clarity and execution.
+                B.Tech CSE graduate from VIT Andhra Pradesh, building backend services, full-stack applications, and AI-driven workflows with a strong focus on clarity and execution.
               </p>
             </div>
           </div>
