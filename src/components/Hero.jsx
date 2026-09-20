@@ -11,7 +11,7 @@ const Hero = () => {
 
   const highlights = [
     { label: 'Current Focus', value: 'Backend engineering, full-stack systems, and applied AI' },
-    { label: 'Experience', value: 'Technical Content Engineer Intern at HackerEarth' },
+    { label: 'Experience', value: 'Technical Content Engineer Intern across backend, databases, and DevOps' },
     { label: 'Problem Solving', value: '400+ LeetCode problems, 1525 contest rating' },
   ]
 
@@ -34,7 +34,7 @@ const Hero = () => {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-            I&apos;m Nishu Kumari, a software engineer based in Bangalore working across backend services, full-stack applications, and generative AI. I currently engineer assessment content and reference codebases at HackerEarth, spanning programming, databases, DevOps, and full-stack domains.
+            I&apos;m Nishu Kumari, a software engineer based in Bangalore working across backend services, full-stack applications, and generative AI. I currently engineer technical assessment content and reference codebases spanning programming, databases, DevOps, and full-stack domains.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">

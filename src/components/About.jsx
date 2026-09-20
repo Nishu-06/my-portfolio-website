@@ -35,7 +35,7 @@ const About = () => {
         >
           <div className="space-y-5 text-base leading-8 text-slate-600 md:text-lg">
             <p>
-              I&apos;m a software engineer working at the intersection of backend systems, full-stack development, and applied AI. At HackerEarth I engineer technical assessment content end-to-end, writing reference solutions, automated test suites, and candidate-ready full-stack codebases across programming, databases, DevOps, and full-stack domains.
+              I&apos;m a software engineer working at the intersection of backend systems, full-stack development, and applied AI. I currently engineer technical assessment content end-to-end, writing reference solutions, automated test suites, and candidate-ready full-stack codebases across programming, databases, DevOps, and full-stack domains.
             </p>
             <p>
               I work with Java, JavaScript, Python, and SQL, building services with Node.js, Express.js, and Spring Boot, interfaces with React.js and Next.js, and data layers across PostgreSQL, MySQL, MS SQL Server, Oracle, MongoDB, and Redis.
